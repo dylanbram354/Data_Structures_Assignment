@@ -1,5 +1,6 @@
 from sweepstakes import Sweepstakes
 from linkedlist import LinkedList
+from binary_search_tree import Binary_Search_Tree
 
 if __name__ == '__main__':
     # Question 1
@@ -43,6 +44,14 @@ if __name__ == '__main__':
     # print(linkedlist.contains_node(65))
 
     # Question 4
+
+    tree = Binary_Search_Tree()
+
+    tree.insert_node(10)
+    tree.insert_node(15)
+    tree.insert_node(5)
+    print(tree.root.l_child.data)
+
 
 
 
