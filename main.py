@@ -1,5 +1,5 @@
 from sweepstakes import Sweepstakes
-
+from linkedlist import LinkedList
 
 if __name__ == '__main__':
     # Question 1
@@ -32,6 +32,20 @@ if __name__ == '__main__':
     # print(my_family)
 
     # Question 3
+
+    # linkedlist = LinkedList()
+    #
+    # linkedlist.append_node(60)
+    # linkedlist.append_node(55)
+    # linkedlist.append_node(65)
+    # linkedlist.add_to_beginning(50)
+    #
+    # print(linkedlist.contains_node(65))
+
+    # Question 4
+
+
+
 
 
 
