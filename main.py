@@ -50,7 +50,11 @@ if __name__ == '__main__':
     tree.insert_node(10)
     tree.insert_node(15)
     tree.insert_node(5)
-    print(tree.root.l_child.data)
+    # tree.insert_node(11)
+    tree.insert_node(45)
+    tree.insert_node(3)
+    print(tree.search_for_node(12))
+
 
 
 

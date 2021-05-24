@@ -30,3 +30,25 @@ class Binary_Search_Tree:
                 else:
                     leaf.l_child = new_node
                     return
+
+    def search_for_node(self, data):
+        find_node = Node(data)
+        if self.root is None:
+            return False
+        current_node = self.root
+        found = False
+        while not found:
+            if current_node.data == find_node.data:
+                return True
+            elif current_node.l_child is None and current_node.r_child is None:
+                return False
+            elif find_node.data > current_node.data:
+                if current_node.r_child is not None:
+                    current_node = current_node.r_child
+                else:
+                    return False
+            elif find_node.data <= current_node.data:
+                if current_node.l_child is not None:
+                    current_node = current_node.l_child
+                else:
+                    return False
