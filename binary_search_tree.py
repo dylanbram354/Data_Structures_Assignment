@@ -40,18 +40,12 @@ class Binary_Search_Tree:
         while not found:
             if current_node.data == find_node.data:
                 return True
-            elif current_node.l_child is None and current_node.r_child is None:
+            elif find_node.data > current_node.data and current_node.r_child is not None:
+                current_node = current_node.r_child
+            elif find_node.data <= current_node.data and current_node.l_child is not None:
+                current_node = current_node.l_child
+            else:
                 return False
-            elif find_node.data > current_node.data:
-                if current_node.r_child is not None:
-                    current_node = current_node.r_child
-                else:
-                    return False
-            elif find_node.data <= current_node.data:
-                if current_node.l_child is not None:
-                    current_node = current_node.l_child
-                else:
-                    return False
 
     def search_for_node_recursive(self, root, data):
         find_node = Node(data)
@@ -59,18 +53,14 @@ class Binary_Search_Tree:
             return False
         if root.data == find_node.data:
             return True
-        if find_node.data < root.data:
-            if root.l_child is not None:
-                root = root.l_child
-                result = self.search_for_node_recursive(root, data)
-            else:
-                return False
-        elif find_node.data > root.data:
-            if root.r_child is not None:
-                root = root.r_child
-                result = self.search_for_node_recursive(root, data)
-            else:
-                return False
+        elif find_node.data < root.data and root.l_child is not None:
+            root = root.l_child
+            result = self.search_for_node_recursive(root, data)
+        elif find_node.data > root.data and root.r_child is not None:
+            root = root.r_child
+            result = self.search_for_node_recursive(root, data)
+        else:
+            return False
         return result
 
     def in_order_traversal(self, root):

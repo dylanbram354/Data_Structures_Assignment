@@ -58,7 +58,8 @@ if __name__ == '__main__':
     tree.insert_node(7)
     tree.insert_node(2)
 
-    print(tree.search_for_node_recursive(tree.root, 9))
+    print(tree.search_for_node(45))
+    print(tree.search_for_node_recursive(tree.root, 45))
 
     # Bonus 1
 
