@@ -57,10 +57,14 @@ if __name__ == '__main__':
     tree.insert_node(9)
     tree.insert_node(7)
     tree.insert_node(2)
-    tree.in_order_traversal(tree.root)
-    # print(tree.search_for_node(12))
 
     # Bonus 1
+
+    # tree.in_order_traversal(tree.root)
+
+    # Bonus 2
+
+    tree.pre_order_traversal(tree.root)
 
 
 

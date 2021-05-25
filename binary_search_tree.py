@@ -61,7 +61,15 @@ class Binary_Search_Tree:
         print(root.data)
         if root.r_child is not None:
             self.in_order_traversal(root.r_child)
-            
+
+    def pre_order_traversal(self, root):
+        if root is None:
+            return
+        print(root.data)
+        if root.l_child is not None:
+            self.pre_order_traversal(root.l_child)
+        if root.r_child is not None:
+            self.pre_order_traversal(root.r_child)
 
 
 
