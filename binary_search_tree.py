@@ -53,6 +53,26 @@ class Binary_Search_Tree:
                 else:
                     return False
 
+    def search_for_node_recursive(self, root, data):
+        find_node = Node(data)
+        if root is None:
+            return False
+        if root.data == find_node.data:
+            return True
+        if find_node.data < root.data:
+            if root.l_child is not None:
+                root = root.l_child
+                result = self.search_for_node_recursive(root, data)
+            else:
+                return False
+        elif find_node.data > root.data:
+            if root.r_child is not None:
+                root = root.r_child
+                result = self.search_for_node_recursive(root, data)
+            else:
+                return False
+        return result
+
     def in_order_traversal(self, root):
         if root is None:
             return

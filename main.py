@@ -58,13 +58,15 @@ if __name__ == '__main__':
     tree.insert_node(7)
     tree.insert_node(2)
 
+    print(tree.search_for_node_recursive(tree.root, 9))
+
     # Bonus 1
 
     # tree.in_order_traversal(tree.root)
 
     # Bonus 2
 
-    tree.pre_order_traversal(tree.root)
+    # tree.pre_order_traversal(tree.root)
 
 
 
