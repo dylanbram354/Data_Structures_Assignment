@@ -50,10 +50,18 @@ if __name__ == '__main__':
     tree.insert_node(10)
     tree.insert_node(15)
     tree.insert_node(5)
-    # tree.insert_node(11)
+    tree.insert_node(11)
     tree.insert_node(45)
-    tree.insert_node(3)
-    print(tree.search_for_node(12))
+    tree.insert_node(4)
+    tree.insert_node(8)
+    tree.insert_node(9)
+    tree.insert_node(7)
+    tree.insert_node(2)
+    tree.in_order_traversal(tree.root)
+    # print(tree.search_for_node(12))
+
+    # Bonus 1
+
 
 
 

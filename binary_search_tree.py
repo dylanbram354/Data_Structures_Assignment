@@ -52,3 +52,19 @@ class Binary_Search_Tree:
                     current_node = current_node.l_child
                 else:
                     return False
+
+    def in_order_traversal(self, root):
+        if root is None:
+            return
+        if root.l_child is not None:
+            self.in_order_traversal(root.l_child)
+        print(root.data)
+        if root.r_child is not None:
+            self.in_order_traversal(root.r_child)
+            
+
+
+
+
+
+
